@@ -1,0 +1,26 @@
+{
+  "name": "limitme",
+  "version": "0.0.1",
+  "description": "A library for limiting the rate at which a queue/array of promises or callbacks executes",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asn007/limitme.git"
+  },
+  "keywords": [
+    "limit",
+    "throttle",
+    "bottleneck",
+    "Promise",
+    "ratelimit"
+  ],
+  "author": "Andrey Sinitsyn <andrey.sin98@gmail.com> (http://andrey.space)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asn007/limitme/issues"
+  },
+  "homepage": "https://github.com/asn007/limitme#readme"
+}
