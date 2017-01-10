@@ -1,6 +1,6 @@
 {
   "name": "limitme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library for limiting the rate at which a queue/array of promises or callbacks is executed",
   "main": "lib/index.js",
   "scripts": {
