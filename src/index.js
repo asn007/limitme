@@ -15,7 +15,7 @@ class RateLimiter {
     this.rateLimit = ratelimit;
     this.lastTime = 0;
     this.queues = [];
-    for(let i = 1; i <= Object.keys(RateLimiter.priorities).length; i++) this.queues.push(new LinkedQueue());
+    for(let i = 0; i < Object.keys(RateLimiter.priorities).length; i++) this.queues.push(new LinkedQueue());
   }
 
   enqueue(priority, fn) {
