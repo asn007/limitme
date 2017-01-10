@@ -29,10 +29,10 @@ class RateLimiter {
 
   runImmediate(fn) {
     const promise = new RateLimiter.Promise((resolve) => {
-      const dNow = new Date.now();
+      const dNow = Date.now();
       this.queues[RateLimiter.priorities.HIGHEST].addToTop({ task: resolve, created: dNow });
       this.totalQueuedTasks++;
-      if(this.totalQueuedTasks == 1 && this.lastTime + this.rateLimit < dNow()) this._runLoop();
+      if(this.totalQueuedTasks == 1 && this.lastTime + this.rateLimit < dNow) this._runLoop();
     });
     if(!fn) return promise;
     else promise.then((timeWaited) => fn(timeWaited));
@@ -55,7 +55,7 @@ class RateLimiter {
       const dNow = Date.now();
       this.queues[priority].push({ task: resolve, created: dNow });
       this.totalQueuedTasks++;
-      if(this.totalQueuedTasks == 1 && this.lastTime + this.rateLimit < dNow()) this._runLoop();
+      if(this.totalQueuedTasks == 1 && this.lastTime + this.rateLimit < dNow) this._runLoop();
     });
   }
 }
