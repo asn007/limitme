@@ -1,6 +1,8 @@
 LimitMe
 =======
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/asn007/limitme.svg)](https://greenkeeper.io/)
+
 A library for limiting the rate of execution of callbacks and Promises
 
 ```js
